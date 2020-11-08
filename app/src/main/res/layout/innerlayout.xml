@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+
+    <data class ="RestaurantBinding">
+
+
+        <variable
+            name="restaurantmodel"
+            type="com.kushan.admin.restaurantlistrecycleview.viewmodel.RestaurantViewModel"/>
+
+    </data>
+
+
+
+
+ 
+
+<android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@{restaurantmodel.image}"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+               android:text="@{restaurantmodel.name}"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{restaurantmodel.speciality}"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{Integer.toString(restaurantmodel.rating).concat("/5")}'
+            android:textSize="14dp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{restaurantmodel.address}"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
+</layout>
